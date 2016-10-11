@@ -4,6 +4,6 @@
     [Owner_Id]  NVARCHAR (128)   NOT NULL,
     [TimeStamp] ROWVERSION       NOT NULL,
     CONSTRAINT [PK_Bases] PRIMARY KEY CLUSTERED ([baseId] ASC),
-    CONSTRAINT [FK_Bases_AspNetUsers] FOREIGN KEY ([Owner_Id]) REFERENCES [dbo].[AspNetUsers] ([Id])
+    CONSTRAINT [FK_Bases_AspNetUsers] FOREIGN KEY ([Owner_Id]) REFERENCES [dbo].[AspNetUsers] ([Id]) ON DELETE SET NULL
 );
 

@@ -4,6 +4,6 @@
     [Text]      NTEXT            NOT NULL,
     [TimeStamp] ROWVERSION       NOT NULL,
     CONSTRAINT [PK_News] PRIMARY KEY CLUSTERED ([NewsId] ASC),
-    CONSTRAINT [FK_News_AspNetUsers] FOREIGN KEY ([Owner_Id]) REFERENCES [dbo].[AspNetUsers] ([Id])
+    CONSTRAINT [FK_News_AspNetUsers] FOREIGN KEY ([Owner_Id]) REFERENCES [dbo].[AspNetUsers] ([Id]) ON DELETE SET NULL
 );
 
